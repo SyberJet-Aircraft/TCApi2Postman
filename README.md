@@ -58,6 +58,11 @@ You'll need the `structure.js` file from your Teamcenter setup (AWC layer). Gene
 
 **Note:** You must regenerate `structure.js` after updating Teamcenter Core or AWC to ensure the API documentation is up-to-date with the latest changes.
 
+**Note:** To include unpublished (Internal) API, before building structure.js, you MUST modify aws2\stage\initenv.cmd by adding a new line with the environment variable **SOAGENAPI_INCLUDE_UNPUBLISHED** set to true: 
+   ```bash
+   SET SOAGENAPI_INCLUDE_UNPUBLISHED=true
+   ```
+
 ### Run TCApi2Postman
 
 Use the command below to convert your API docs to a Postman collection:
